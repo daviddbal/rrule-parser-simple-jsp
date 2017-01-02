@@ -24,13 +24,6 @@ public class RRuleServlet extends HttpServlet {
 	
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    	BufferedReader reader = request.getReader();
-    	String str;
-    	do {
-    	      str = reader.readLine();
-    	      System.out.println("line:" + str);
-    	    } while (!str.equals("stop"));
     	
     	String rruleContent = request.getParameter("rruleContent");
 		request.getParameterMap().entrySet().forEach(System.out::println);
